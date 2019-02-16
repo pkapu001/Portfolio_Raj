@@ -1,40 +1,9 @@
-$primary-color: #444;
-//$secondary-color: #eece1a;
-$secondary-color: #fc320a;
-//$facebook-blue: #3c5a99;
-$show-home-image: true;
-$home-image: url(../img/background.jpg);
-$background-opacity: 0.78;
-
-@mixin easeOut {
-  transition: all 0.7s ease-out;
-}
-
 @import "menu";
 @import "config";
+@import "mobile";
 
 * {
   box-sizing: border-box;
-}
-
-@mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
-      &:after {
-        content: "";
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($primary-color, $background-opacity);
-      }
-    }
-  }
 }
 
 body {
@@ -53,7 +22,7 @@ h3 {
   font-weight: 400;
   &.lg-heading {
     font-weight: 600;
-    font-size: 6.5rem;
+    font-size: 6rem;
     color: black;
   }
   &.sm-heading {
