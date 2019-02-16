@@ -7,8 +7,15 @@ $home-image: url(../img/background.jpg);
 $background-opacity: 0.78;
 
 @mixin easeOut {
-  transition: all 0.7s ease-out;
+  &:hover {
+    color: $secondary-color;
+
+    transition: all 0.7s ease-out;
+  }
 }
+
+@import "menu";
+@import "config";
 
 * {
   box-sizing: border-box;
@@ -101,11 +108,11 @@ main {
           @include easeOut();
         }
       }*/
+      @include easeOut();
 
       &:hover {
-        color: $secondary-color;
+        //color: $secondary-color;
         cursor: none;
-        @include easeOut();
       }
     }
   }

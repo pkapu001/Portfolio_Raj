@@ -1,3 +1,29 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 40px;
+  top: 35px;
+  cursor: pointer; }
+  .menu-btn:hover {
+    color: #fc320a;
+    transition: all 0.7s ease-out; }
+  .menu-btn .btn-line {
+    width: 30px;
+    height: 4px;
+    margin: 0 0 5px 0;
+    background: white; }
+    .menu-btn .btn-line:hover {
+      color: #fc320a;
+      transition: all 0.7s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px); }
+
 * {
   box-sizing: border-box; }
 
@@ -73,5 +99,6 @@ main {
       }*/ }
       main .icons a:hover {
         color: #fc320a;
-        cursor: none;
         transition: all 0.7s ease-out; }
+      main .icons a:hover {
+        cursor: none; }
