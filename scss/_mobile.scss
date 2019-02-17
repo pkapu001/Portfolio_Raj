@@ -19,6 +19,25 @@
         "job2"
         "job3";
       grid-template-columns: 1fr;
+
+      .job-1 {
+        &:hover {
+          transform: scale(1.05);
+          transform-origin: bottom;
+        }
+      }
+      .job-2 {
+        &:hover {
+          transform: scale(1.05);
+          transform-origin: bottom;
+        }
+      }
+      .job-3 {
+        &:hover {
+          transform: scale(1.05);
+          transform-origin: bottom;
+        }
+      }
     }
   }
 
@@ -63,6 +82,30 @@
 }
 
 @include mediaSm {
+  #about {
+    .about-info {
+      .job-1 {
+        &:hover {
+          transform: scale(1);
+        }
+      }
+      .job-2 {
+        &:hover {
+          transform: scale(1);
+        }
+      }
+      .job-3 {
+        &:hover {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  main {
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    // padding: 0.5rem;
+  }
+
   .projects {
     grid-template-columns: repeat(1, 1fr);
   }
