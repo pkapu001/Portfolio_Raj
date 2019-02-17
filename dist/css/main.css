@@ -201,12 +201,49 @@ main {
     padding: 0.5rem;
     border-bottom: #fc320a 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px solid #fff; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #fc320a;
+      transition: all 0.7s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background-color: #fc320a;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #bababa;
+  color: #fff; }
+
 #main-footer {
   text-align: center;
   padding: 0.5rem;
   background: #212121;
   color: set-test-color(#3a3a3a);
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   #about .about-info {
@@ -236,4 +273,10 @@ main {
     .menu-branding .poterait {
       background: url(../img/mesmall.jpg);
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr); } }
