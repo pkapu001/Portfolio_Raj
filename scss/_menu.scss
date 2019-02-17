@@ -13,7 +13,7 @@
     height: 4px;
     margin: 0 0 5px 0;
     @include easeOut();
-    background: white;
+    background: set-text-color($primary-color);
   }
 
   //rotate the button to x
@@ -120,7 +120,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 400;
-    color: white;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
