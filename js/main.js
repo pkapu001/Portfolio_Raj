@@ -15,7 +15,7 @@ menuBtn.addEventListener("click", toggleMenu);
 //job.addEventListener("mouseover", itsin);
 //job.addEventListener("mouseout", itsout);
 
-job.forEach(item => item.addEventListener("mouseover", itsin));
+jogitb.forEach(item => item.addEventListener("mouseover", itsin));
 job.forEach(item => item.addEventListener("mouseout", itsout));
 
 function toggleMenu() {
