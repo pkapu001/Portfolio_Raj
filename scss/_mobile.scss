@@ -58,14 +58,18 @@
 
     .lg-heading {
       line-height: 1;
-      margin-bottom: 2rem;
+      margin-top: 10vh;
+      margin-bottom: 1rem;
       font-size: 4rem;
 
       animation: animate 1.6 s linear infinite;
     }
 
     .sm-heading {
+      text-align: center;
       font-size: 1.5rem;
+      width: 100%;
+      padding: 3px;
     }
   }
 
@@ -96,6 +100,9 @@
 
   .projects {
     grid-template-columns: repeat(2, 1fr);
+    img {
+      border-radius: 32px;
+    }
   }
 }
 
@@ -120,7 +127,7 @@
     }
   }
   .overlay {
-    border-radius: 20px;
+    border-radius: 30px;
   }
 
   main {

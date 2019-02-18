@@ -249,7 +249,8 @@ h3 {
     border-radius: 15px;
     border: solid 1px #111;
     width: fit-content;
-    padding: 0.2rem 7rem 0 1rem; }
+    padding: 0.2rem 7rem 0 1rem;
+    background-color: rgba(71, 71, 71, 0.75); }
 
 a {
   color: white;
@@ -261,7 +262,8 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #fc320a; }
+  color: #fc320a;
+  font-size: 3rem; }
 
 main {
   padding: 4rem;
@@ -333,6 +335,7 @@ main {
       background: #474747;
       z-index: 1;
       padding: 0.5rem;
+      border-radius: 25px;
       border-bottom: #fc320a 5px solid;
       transition: all 0.7s ease-out; }
       #about .about-info .job h4 {
@@ -353,6 +356,7 @@ main {
 
 .btn, .btn-dark, .btn-light {
   display: block;
+  border-radius: 15px;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
@@ -426,11 +430,15 @@ main {
     text-align: center; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 2rem;
+      margin-top: 10vh;
+      margin-bottom: 1rem;
       font-size: 4rem;
       animation: animate 1.6 s linear infinite; }
     main .sm-heading {
-      font-size: 1.5rem; }
+      text-align: center;
+      font-size: 1.5rem;
+      width: 100%;
+      padding: 3px; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -451,7 +459,9 @@ main {
       width: 150px;
       height: 150px; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+    .projects img {
+      border-radius: 32px; } }
 
 @media screen and (max-width: 500px) {
   #about .about-info .job-1:hover {
@@ -461,7 +471,7 @@ main {
   #about .about-info .job-3:hover {
     transform: scale(1); }
   .overlay {
-    border-radius: 20px; }
+    border-radius: 30px; }
   main {
     padding: 1.5rem 0.5rem 1rem 0.5rem; }
   .projects {
