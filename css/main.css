@@ -1,18 +1,16 @@
 @keyframes animate {
   0% {
+    background-position: -500%; }
+  100% {
+    background-position: 500%; } }
+
+@keyframes animate_small {
+  0% {
     background-position: -190%; }
   30% {
     background-position: 190%; }
   100% {
     background-position: 190%; } }
-
-@keyframes animate_small {
-  0% {
-    background-position: -320%; }
-  30% {
-    background-position: 530%; }
-  100% {
-    background-position: 530%; } }
 
 @keyframes blink {
   0% {
@@ -133,19 +131,17 @@
 
 @keyframes animate {
   0% {
+    background-position: -500%; }
+  100% {
+    background-position: 500%; } }
+
+@keyframes animate_small {
+  0% {
     background-position: -190%; }
   30% {
     background-position: 190%; }
   100% {
     background-position: 190%; } }
-
-@keyframes animate_small {
-  0% {
-    background-position: -320%; }
-  30% {
-    background-position: 530%; }
-  100% {
-    background-position: 530%; } }
 
 @keyframes blink {
   0% {
@@ -194,7 +190,7 @@ body {
       width: 100%;
       height: 100%;
       background-size: contain;
-      background: rgba(58, 58, 58, 0.9); }
+      background: rgba(58, 58, 58, 0.78); }
   body#about-img {
     background: url(../img/about.jpg);
     background-attachment: fixed;
@@ -238,15 +234,13 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-weight: 400;
-    font-size: 4rem;
+    font-weight: 600;
+    font-size: 5rem;
     padding-bottom: 20px;
-    color: transparent;
     height: fit-content;
-    background: linear-gradient(-80deg, #000, #000, #000, #000, #000, #000, #000, #cccccc, #000, #000, #000, #000, #000, #000);
-    -webkit-background-clip: text;
-    background-size: 80%;
-    animation: animate 1.5s linear infinite; }
+    position: relative;
+    overflow: hidden;
+    color: #000; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -255,8 +249,7 @@ h3 {
     border-radius: 15px;
     border: solid 1px #111;
     width: fit-content;
-    padding: 0.2rem 7rem 0 1rem;
-    background-color: rgba(63, 63, 63, 0.5); }
+    padding: 0.2rem 7rem 0 1rem; }
 
 a {
   color: white;
@@ -467,10 +460,9 @@ main {
     transform: scale(1); }
   #about .about-info .job-3:hover {
     transform: scale(1); }
+  .overlay {
+    border-radius: 20px; }
   main {
     padding: 1.5rem 0.5rem 1rem 0.5rem; }
-    main .lg-heading {
-      background-size: 90%;
-      animation: animate_small 1.2s linear infinite; }
   .projects {
     grid-template-columns: repeat(1, 1fr); } }
