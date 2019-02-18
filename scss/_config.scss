@@ -13,6 +13,15 @@ $background-opacity: 0.8;
 }
 @keyframes animate {
   0% {
+    background-position: -500%;
+  }
+
+  100% {
+    background-position: 500%;
+  }
+}
+@keyframes animate_small {
+  0% {
     background-position: -190%;
   }
 
@@ -21,18 +30,6 @@ $background-opacity: 0.8;
   }
   100% {
     background-position: 190%;
-  }
-}
-@keyframes animate_small {
-  0% {
-    background-position: -320%;
-  }
-
-  30% {
-    background-position: 530%;
-  }
-  100% {
-    background-position: 530%;
   }
 }
 @keyframes blink {
@@ -73,7 +70,7 @@ $background-opacity: 0.8;
         height: 100%;
 
         background-size: contain;
-        background: rgba($primary-color, 0.9);
+        background: rgba($primary-color, 0.78);
       }
     }
   }
@@ -120,6 +117,7 @@ $background-opacity: 0.8;
   right: 0;
   width: 100%;
   height: 100%;
+
   background: rgba($primary-color, $background-opacity);
 }
 //set text color

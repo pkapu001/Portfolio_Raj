@@ -119,14 +119,13 @@
       }
     }
   }
+  .overlay {
+    border-radius: 20px;
+  }
+
   main {
     padding: 1.5rem 0.5rem 1rem 0.5rem;
     // padding: 0.5rem;
-
-    .lg-heading {
-      background-size: 90%;
-      animation: animate_small 1.2s linear infinite;
-    }
   }
 
   .projects {

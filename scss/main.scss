@@ -30,35 +30,24 @@ h3 {
   margin: 0;
   font-weight: 400;
   &.lg-heading {
-    font-weight: 400;
-    font-size: 4rem;
+    font-weight: 600;
+    font-size: 5rem;
     //margin-bottom: 5px;
     padding-bottom: 20px;
-    color: transparent;
     height: fit-content;
-
-    background: linear-gradient(
-      -80deg,
-      #000,
-      #000,
-      #000,
-      #000,
-      #000,
-      #000,
-      #000,
-      rgb(204, 204, 204),
-      #000,
-      #000,
-      #000,
-      #000,
-      #000,
-      #000
-    );
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    //background: linear-gradient(90deg, #000, #fff, #000);
+    //color: linear-gradient(90deg, #000, #fff, #000);
 
     // background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-size: 80%;
-    animation: animate 1.5s linear infinite;
+    // -webkit-background-clip: text;
+    // background-size: 80%;
+    // animation: animate 5s linear infinite;
+    //animation: name duration timing-function delay iteration-count direction;
+
+    //-webkit-text-fill-color: rgba(0, 0, 0, 0.8);
   }
 
   &.sm-heading {
@@ -68,7 +57,7 @@ h3 {
     border: solid 1px #111;
     width: fit-content;
     padding: 0.2rem 7rem 0 1rem;
-    background-color: rgba(lighten($primary-color, $amount: 2), 0.5);
+    //background-color: rgba(lighten($primary-color, $amount: 2), 0.5);
     //animation: blink 1.5s linear infinite;
   }
 }
