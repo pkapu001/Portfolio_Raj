@@ -1,3 +1,29 @@
+@keyframes animate {
+  0% {
+    background-position: -190%; }
+  30% {
+    background-position: 190%; }
+  100% {
+    background-position: 190%; } }
+
+@keyframes animate_small {
+  0% {
+    background-position: -320%; }
+  30% {
+    background-position: 530%; }
+  100% {
+    background-position: 530%; } }
+
+@keyframes blink {
+  0% {
+    background-color: rgba(63, 63, 63, 0.5); }
+  65% {
+    background-color: rgba(186, 186, 186, 0.5); }
+  80% {
+    ackground-color: black; }
+  100% {
+    background-color: rgba(63, 63, 63, 0.5); } }
+
 .overlay {
   z-index: -1;
   padding: 0;
@@ -105,6 +131,32 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@keyframes animate {
+  0% {
+    background-position: -190%; }
+  30% {
+    background-position: 190%; }
+  100% {
+    background-position: 190%; } }
+
+@keyframes animate_small {
+  0% {
+    background-position: -320%; }
+  30% {
+    background-position: 530%; }
+  100% {
+    background-position: 530%; } }
+
+@keyframes blink {
+  0% {
+    background-color: rgba(63, 63, 63, 0.5); }
+  65% {
+    background-color: rgba(186, 186, 186, 0.5); }
+  80% {
+    ackground-color: black; }
+  100% {
+    background-color: rgba(63, 63, 63, 0.5); } }
+
 .overlay {
   z-index: -1;
   padding: 0;
@@ -121,6 +173,7 @@
 body {
   background-color: #3a3a3a;
   color: #fff;
+  min-height: 100%;
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
@@ -128,18 +181,20 @@ body {
     background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover;
+    height: 100vh;
     margin: 2px; }
-    body#bg-img:after {
-      content: "";
+    body#bg-img .overlay {
       z-index: -1;
-      position: absolute;
       padding: 0;
       margin: 0;
       top: 0;
       right: 0;
+      min-width: fit-content;
+      min-height: fit-content;
       width: 100%;
       height: 100%;
-      background: rgba(58, 58, 58, 0.8); }
+      background-size: contain;
+      background: rgba(58, 58, 58, 0.9); }
   body#about-img {
     background: url(../img/about.jpg);
     background-attachment: fixed;
@@ -183,9 +238,15 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-weight: 600;
-    font-size: 6rem;
-    color: black; }
+    font-weight: 400;
+    font-size: 4rem;
+    padding-bottom: 20px;
+    color: transparent;
+    height: fit-content;
+    background: linear-gradient(-80deg, #000, #000, #000, #000, #000, #000, #000, #cccccc, #000, #000, #000, #000, #000, #000);
+    -webkit-background-clip: text;
+    background-size: 80%;
+    animation: animate 1.5s linear infinite; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -194,7 +255,7 @@ h3 {
     border-radius: 15px;
     border: solid 1px #111;
     width: fit-content;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 7rem 0 1rem;
     background-color: rgba(63, 63, 63, 0.5); }
 
 a {
@@ -211,9 +272,10 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  height: 100%;
+  min-height: calc(100vh - 40px); }
   main#home {
-    overflow: hidden; }
+    height: fit-content; }
     main#home h1 {
       margin-top: 20vh; }
   main .icons {
@@ -248,8 +310,6 @@ main {
       margin: auto;
       border: solid 3px #fc320a;
       border-radius: 50%; }
-    #about .about-info h3 {
-      font-size: 3rem; }
     #about .about-info .bio {
       grid-area: bio;
       font-size: 1.3rem; }
@@ -282,10 +342,9 @@ main {
       padding: 0.5rem;
       border-bottom: #fc320a 5px solid;
       transition: all 0.7s ease-out; }
-      #about .about-info .job h6 {
-        font-size: 1.5rem;
+      #about .about-info .job h4 {
         font-weight: 50;
-        margin: 10px; }
+        margin: 10px 0; }
 
 .projects {
   display: grid;
@@ -340,17 +399,21 @@ main {
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background: #212121;
+  background: #141414;
   color: set-test-color(#3a3a3a);
   height: 40px; }
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  h1 .lg-heading {
+    animation: animate 2s linear infinite; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  h1 .lg-heading {
+    animation: animate 2s linear infinite; } }
 
 @media screen and (max-width: 768px) {
   #about .about-info {
@@ -370,7 +433,11 @@ main {
     text-align: center; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 2rem;
+      font-size: 4rem;
+      animation: animate 1.6 s linear infinite; }
+    main .sm-heading {
+      font-size: 1.5rem; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -402,5 +469,8 @@ main {
     transform: scale(1); }
   main {
     padding: 1.5rem 0.5rem 1rem 0.5rem; }
+    main .lg-heading {
+      background-size: 90%;
+      animation: animate_small 1.2s linear infinite; }
   .projects {
     grid-template-columns: repeat(1, 1fr); } }

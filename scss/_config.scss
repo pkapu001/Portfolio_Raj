@@ -11,6 +11,46 @@ $background-opacity: 0.8;
 @mixin easeOut {
   transition: all 0.7s ease-out;
 }
+@keyframes animate {
+  0% {
+    background-position: -190%;
+  }
+
+  30% {
+    background-position: 190%;
+  }
+  100% {
+    background-position: 190%;
+  }
+}
+@keyframes animate_small {
+  0% {
+    background-position: -320%;
+  }
+
+  30% {
+    background-position: 530%;
+  }
+  100% {
+    background-position: 530%;
+  }
+}
+@keyframes blink {
+  0% {
+    background-color: rgba(lighten($primary-color, $amount: 2), 0.5);
+    //columns: #fff;
+  }
+  65% {
+    background-color: rgba(lighten($primary-color, $amount: 50), 0.5);
+    //color: #000;
+  }
+  80% {
+    ackground-color: rgba(darken($primary-color, $amount: 50), 1);
+  }
+  100% {
+    background-color: rgba(lighten($primary-color, $amount: 2), 0.5);
+  }
+}
 
 @mixin background {
   @if $show-home-image {
@@ -18,18 +58,22 @@ $background-opacity: 0.8;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
+      height: 100vh;
       margin: 2px;
-      &:after {
-        content: "";
+
+      .overlay {
         z-index: -1;
-        position: absolute;
         padding: 0;
         margin: 0;
         top: 0;
         right: 0;
+        min-width: fit-content;
+        min-height: fit-content;
         width: 100%;
         height: 100%;
-        background: rgba($primary-color, $background-opacity);
+
+        background-size: contain;
+        background: rgba($primary-color, 0.9);
       }
     }
   }

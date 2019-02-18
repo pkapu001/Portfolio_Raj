@@ -9,6 +9,7 @@ body {
   @include background;
   background-color: $primary-color;
   color: set-text-color($primary-color);
+  min-height: 100%;
   height: 100%;
 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -29,18 +30,46 @@ h3 {
   margin: 0;
   font-weight: 400;
   &.lg-heading {
-    font-weight: 600;
-    font-size: 6rem;
-    color: black;
+    font-weight: 400;
+    font-size: 4rem;
+    //margin-bottom: 5px;
+    padding-bottom: 20px;
+    color: transparent;
+    height: fit-content;
+
+    background: linear-gradient(
+      -80deg,
+      #000,
+      #000,
+      #000,
+      #000,
+      #000,
+      #000,
+      #000,
+      rgb(204, 204, 204),
+      #000,
+      #000,
+      #000,
+      #000,
+      #000,
+      #000
+    );
+
+    // background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-size: 80%;
+    animation: animate 1.5s linear infinite;
   }
+
   &.sm-heading {
     font-size: 2rem;
     margin-bottom: 2rem;
     border-radius: 15px;
     border: solid 1px #111;
     width: fit-content;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 7rem 0 1rem;
     background-color: rgba(lighten($primary-color, $amount: 2), 0.5);
+    //animation: blink 1.5s linear infinite;
   }
 }
 
@@ -62,10 +91,12 @@ header {
 main {
   padding: 4rem;
   //height: 100%;
-  min-height: calc(100vh - 60px);
+  height: 100%;
+  min-height: calc(100vh - 40px);
 
   &#home {
-    overflow: hidden;
+    //overflow: hidden;
+    height: fit-content;
     h1 {
       margin-top: 20vh;
     }
@@ -116,9 +147,6 @@ main {
       border-radius: 50%;
     }
 
-    h3 {
-      font-size: 3rem;
-    }
     .bio {
       grid-area: bio;
       font-size: 1.3rem;
@@ -161,10 +189,9 @@ main {
       border-bottom: $secondary-color 5px solid;
       @include easeOut;
 
-      h6 {
-        font-size: 1.5rem;
+      h4 {
         font-weight: 50;
-        margin: 10px;
+        margin: 10px 0;
       }
     }
   }
@@ -245,7 +272,7 @@ main {
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background: darken($primary-color, 10);
+  background: darken($primary-color, 15);
   color: set-test-color($primary-color);
   height: 40px;
 }
