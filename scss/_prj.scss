@@ -1,0 +1,53 @@
+.proj {
+  position: absolute;
+  z-index: 3;
+  //-items: center;
+  //align-content: center;
+  //align-self: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 75vh;
+  width: 75vh;
+  //min-height: fit-content;
+  margin: auto;
+  padding: 30px;
+  background-color: rgba(darken($primary-color, 10), 0.9);
+  border-radius: 32px;
+  z-index: 2;
+  visibility: hidden;
+  transform: scale(0.1);
+  border: 2px solid #fff;
+  @include easeOut;
+
+  .phead {
+    color: $secondary-color;
+    margin-top: 10px;
+  }
+
+  &.show {
+    visibility: visible;
+
+    transform: scale(1);
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .phead {
+    text-align: center;
+    //font-size: 15px;
+  }
+}
+
+.red-btn {
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 20px;
+  right: 20px;
+}

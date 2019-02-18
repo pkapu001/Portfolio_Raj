@@ -1,5 +1,6 @@
 @import "menu";
 @import "config";
+@import "prj";
 
 * {
   box-sizing: border-box;
@@ -18,6 +19,10 @@ body {
 
 .blurnow {
   filter: blur(7px);
+}
+
+.blurnow_ext {
+  filter: blur(15px);
 }
 
 .darken {

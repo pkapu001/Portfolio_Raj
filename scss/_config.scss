@@ -6,6 +6,7 @@ $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $about-image: url(../img/about.jpg);
 $work-image: url(../img/b1.jpg);
+$vid: url(../vid/back1.mp4);
 $background-opacity: 0.8;
 
 @mixin easeOut {
@@ -49,6 +50,17 @@ $background-opacity: 0.8;
   }
 }
 
+.vid_b {
+  position: relative;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 10vh;
+  height: 100%;
+  z-index: -1;
+  display: cover;
+}
+
 @mixin background {
   @if $show-home-image {
     &#bg-img {
@@ -58,8 +70,8 @@ $background-opacity: 0.8;
       height: 100vh;
       margin: 2px;
 
-      .overlay {
-        z-index: -1;
+      /*.overlay {
+        z-index: 1;
         padding: 0;
         margin: 0;
         top: 0;
@@ -69,9 +81,8 @@ $background-opacity: 0.8;
         width: 100%;
         height: 100%;
 
-        background-size: contain;
         background: rgba($primary-color, 0.78);
-      }
+      }*/
     }
   }
   &#about-img {
@@ -88,7 +99,15 @@ $background-opacity: 0.8;
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba($primary-color, 0.5);
+      background: linear-gradient(
+        135deg,
+        rgba(lighten($primary-color, 50), 0.5),
+        rgba($primary-color, 0.5),
+        rgba($primary-color, 0.5),
+        rgba($primary-color, 0.5)
+      );
+      //background-color:
+      // background: linear-gradient(90deg, rgba(#fff, 1), rgba(#000, 1));
     }
   }
   &#work-img {
@@ -105,6 +124,7 @@ $background-opacity: 0.8;
       right: 0;
       width: 100%;
       height: 100%;
+
       background: rgba($primary-color, 0.9);
     }
   }
@@ -117,6 +137,7 @@ $background-opacity: 0.8;
   right: 0;
   width: 100%;
   height: 100%;
+  min-width: fit-content;
 
   background: rgba($primary-color, $background-opacity);
 }

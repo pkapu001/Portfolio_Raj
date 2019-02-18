@@ -78,23 +78,40 @@
     float: none;
     width: 100%;
     min-height: 0;
+    @include easeOut;
     &.show {
       transform: translate3d(0, 0, 0);
     }
   }
-  .menu-nav {
-    height: 75vh;
-    transform: translateed(-100%, 0, 0);
-    font-size: 24px;
-  }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
+  .menu {
+    &-nav {
+      height: 75vh;
+      transform: translate3d(-100%, 0, 0);
+      font-size: 24px;
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    &-branding {
+      height: 25vh;
+      transform: translate3d(100%, 0, 0);
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
 
-    .poterait {
-      background: url(../img/mesmall.jpg);
-      width: 150px;
-      height: 150px;
+      .poterait {
+        background: url(../img/mesmall.jpg);
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .nav-item {
+      transform: translate3d(600px, 0, 0);
+
+      @include easeOut;
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
     }
   }
 
@@ -137,5 +154,11 @@
 
   .projects {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.2s;
   }
 }
