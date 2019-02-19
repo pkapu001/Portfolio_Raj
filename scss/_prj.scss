@@ -1,16 +1,14 @@
 .proj {
   position: absolute;
   z-index: 3;
-  //-items: center;
-  //align-content: center;
-  //align-self: center;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   height: 75vh;
   width: 75vh;
-  //min-height: fit-content;
+  min-height: fit-content;
+
   margin: auto;
   padding: 30px;
   background-color: rgba(darken($primary-color, 10), 0.9);

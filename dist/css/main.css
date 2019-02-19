@@ -32,6 +32,18 @@
   z-index: -1;
   display: cover; }
 
+.c-overlay {
+  position: absolute;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  min-width: fit-content;
+  background: rgba(43, 117, 119, 0.55); }
+
 .overlay {
   z-index: -1;
   padding: 0;
@@ -174,6 +186,18 @@
   z-index: -1;
   display: cover; }
 
+.c-overlay {
+  position: absolute;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  min-width: fit-content;
+  background: rgba(43, 117, 119, 0.55); }
+
 .overlay {
   z-index: -1;
   padding: 0;
@@ -194,6 +218,7 @@
   bottom: 0;
   height: 75vh;
   width: 75vh;
+  min-height: fit-content;
   margin: auto;
   padding: 30px;
   background-color: rgba(33, 33, 33, 0.9);
@@ -233,6 +258,19 @@ body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
+  body #cnt-img {
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 2px; }
+    body #cnt-img video {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover; }
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
@@ -285,7 +323,7 @@ body {
   filter: blur(7px); }
 
 .blurnow_ext {
-  filter: blur(15px); }
+  filter: blur(30px); }
 
 .darken {
   background-color: #7a7a7a; }
@@ -446,7 +484,7 @@ main {
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 1.5rem;
     margin-bottom: 3rem;
     transition: all 0.7s ease-out; }
     .boxes div:hover {
@@ -477,6 +515,11 @@ main {
     animation: animate 2s linear infinite; } }
 
 @media screen and (max-width: 768px) {
+  .proj {
+    min-height: fit-content;
+    margin: 25px 10px;
+    height: 95%;
+    width: 95%; }
   #about .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }

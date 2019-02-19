@@ -21,6 +21,14 @@
 }
 
 @include mediaMd {
+  .proj {
+    //position: relative;
+    min-height: fit-content;
+    margin: 25px 10px;
+    height: 95%;
+    width: 95%;
+  }
+
   #about {
     .about-info {
       grid-template-areas:
