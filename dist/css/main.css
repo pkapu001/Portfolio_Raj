@@ -446,6 +446,9 @@ main {
         font-weight: 50;
         margin: 10px 0; }
 
+.proj {
+  position: fixed; }
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
