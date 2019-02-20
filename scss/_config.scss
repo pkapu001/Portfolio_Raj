@@ -73,7 +73,8 @@ $background-opacity: 0.8;
   min-height: fit-content;
   min-width: fit-content;
 
-  background: rgba(rgb(43, 117, 119), 0.55);
+  //background: rgba(rgb(43, 117, 119), 0.55);
+  background: rgba(41, 36, 78, 0.55);
 }
 
 @mixin background {
