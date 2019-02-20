@@ -43,7 +43,7 @@
   height: 100%;
   min-height: fit-content;
   min-width: fit-content;
-  background: rgba(43, 117, 119, 0.55); }
+  background: rgba(41, 36, 78, 0.55); }
 
 .overlay {
   z-index: -1;
@@ -198,7 +198,7 @@
   height: 100%;
   min-height: fit-content;
   min-width: fit-content;
-  background: rgba(43, 117, 119, 0.55); }
+  background: rgba(41, 36, 78, 0.55); }
 
 .overlay {
   z-index: -1;
