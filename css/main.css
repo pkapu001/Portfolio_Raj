@@ -477,6 +477,10 @@ main {
   background: #6d6d6d;
   color: #fff; }
 
+#contact .sm-heading {
+  background: rgba(43, 196, 207, 0.2);
+  border-color: rgba(43, 196, 207, 0.4); }
+
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -491,15 +495,17 @@ main {
     height: 50%;
     width: 50%;*/
     transition: all 0.7s ease-out; }
+    .boxes div .span {
+      color: #fc320a; }
     .boxes div:hover {
       padding: 5rem 4rem;
       /* height: 50%;
       width: 50%;
       border: 0px;*/
-      background: radial-gradient(#18e0ee, rgba(24, 224, 238, 0) 65%);
+      background: radial-gradient(#2bc4cf, rgba(43, 196, 207, 0) 65%);
       color: #000; }
       .boxes div:hover span {
-        color: #000; }
+        color: #fc320a; }
 
 #main-footer {
   text-align: center;
