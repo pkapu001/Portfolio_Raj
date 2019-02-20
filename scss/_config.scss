@@ -79,7 +79,7 @@ $background-opacity: 0.8;
 @mixin background {
   @if $show-home-image {
     #cnt-img {
-      background: $home-image;
+      //  background: $home-image;
       background-attachment: fixed;
       background-size: cover;
       height: 100vh;
