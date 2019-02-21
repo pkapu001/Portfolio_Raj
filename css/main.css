@@ -351,6 +351,7 @@ body {
         rgba($primary-color, 0.5)
       );*/ }
   body#work-img {
+    position: absolute;
     background: url(../img/b1.jpg);
     background-attachment: fixed;
     background-size: cover;
