@@ -23,7 +23,7 @@ p_btn.forEach(function(elem) {
   elem.addEventListener("click", function() {
     prj_view(elem.id);
   });
-  console.log(elem.id);
+  //console.log(elem.id);
 });
 job.forEach(item => item.addEventListener("mouseover", itsin));
 job.forEach(item => item.addEventListener("mouseout", itsout));

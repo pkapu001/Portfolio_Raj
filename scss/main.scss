@@ -125,6 +125,7 @@ main {
 }
 #about {
   @include easeOut;
+  //position: absolute;
   padding-top: 1rem;
   padding-bottom: 1rem;
   z-index: 1;
@@ -159,6 +160,7 @@ main {
     .bio {
       grid-area: bio;
       font-size: 1.3rem;
+
       p {
         margin-top: 2px;
       }
