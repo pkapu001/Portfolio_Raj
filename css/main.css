@@ -372,7 +372,7 @@ body {
   filter: blur(30px); }
 
 .darken {
-  background-color: #424242; }
+  background-color: rgba(66, 66, 66, 0.8); }
 
 h1,
 h2,
@@ -596,16 +596,25 @@ main {
     width: 95%; }
   #about .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; }
-    #about .about-info .job-1:hover {
-      transform: scale(1.05);
-      transform-origin: bottom; }
-    #about .about-info .job-2:hover {
-      transform: scale(1.05);
-      transform-origin: bottom; }
-    #about .about-info .job-3:hover {
-      transform: scale(1.05);
-      transform-origin: bottom; }
+    grid-template-columns: 1fr;
+    /*.job-1 {
+        &:hover {
+          transform: scale(1.05);
+          transform-origin: bottom;
+        }
+      }
+      .job-2 {
+        &:hover {
+          transform: scale(1.05);
+          transform-origin: bottom;
+        }
+      }
+      .job-3 {
+        &:hover {
+          transform: scale(1.05);
+          transform-origin: bottom;
+        }
+      }*/ }
   main {
     align-items: center;
     text-align: center; }
@@ -655,12 +664,30 @@ main {
       border-radius: 32px; } }
 
 @media screen and (max-width: 500px) {
-  #about .about-info .job-1:hover {
-    transform: scale(1); }
-  #about .about-info .job-2:hover {
-    transform: scale(1); }
-  #about .about-info .job-3:hover {
-    transform: scale(1); }
+  /*#about {
+    .about-info {
+      .job {
+         &:hover {
+          transform: scale(1);
+        }
+      }
+      .job-1 {
+        &:hover {
+          transform: scale(1);
+        }
+      }
+      .job-2 {
+         &:hover {
+          transform: scale(1);
+        }
+      }
+      .job-3 {
+        &:hover {
+          transform: scale(1);
+        }
+      }
+    }
+  }*/
   .overlay {
     border-radius: 30px; }
   main {
