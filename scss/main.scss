@@ -26,7 +26,7 @@ body {
 }
 
 .darken {
-  background-color: lighten($primary-color, $amount: 25);
+  background-color: lighten($primary-color, $amount: 3);
 }
 
 h1,
@@ -37,9 +37,13 @@ h3 {
   &.lg-heading {
     font-weight: 600;
     font-size: 5rem;
-    //margin-bottom: 5px;
-    padding-bottom: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 1px;
+    padding-right: 30px;
     height: fit-content;
+    border-radius: 30px;
+
+    width: fit-content;
     position: relative;
     overflow: hidden;
     color: #000;
@@ -123,9 +127,18 @@ main {
   @include easeOut;
   padding-top: 1rem;
   padding-bottom: 1rem;
-
+  z-index: 1;
   .lg-heading {
+    background: linear-gradient(
+      90deg,
+      rgba($abt-color, 0.6) 50%,
+      rgba($abt-color, 0) 80%
+    );
     font-size: 4rem;
+  }
+  .sm-heading {
+    background: rgba($abt-color, 0.7);
+    border: 2px rgba($abt-color, 0.8) solid;
   }
   .about-info {
     display: grid;
@@ -152,39 +165,44 @@ main {
     }
     .job-1 {
       grid-area: job1;
-      &:hover {
+      /*&:hover {
         background: darken($primary-color, 5);
         z-index: 2;
         transform: scale(1.5, 1.5);
         transform-origin: left bottom;
-      }
+      }*/
     }
     .job-2 {
       grid-area: job2;
-      &:hover {
+      /* &:hover {
         background: darken($primary-color, 5);
         z-index: 2;
         transform: scale(1.5, 1.5);
         transform-origin: bottom;
-      }
+      }*/
     }
     .job-3 {
       grid-area: job3;
-      &:hover {
-        background: darken($primary-color, 5);
+      /*&:hover {
+        //background: darken($primary-color, 5);
         z-index: 2;
         transform: scale(1.5, 1.5);
         transform-origin: right bottom;
-      }
+      }*/
     }
 
     .job {
-      background: lighten($primary-color, 5);
-      z-index: 1;
+      //background: lighten($primary-color, 5);
+      background: rgba($abt-color, 0.5);
+      z-index: 3;
       padding: 0.5rem;
       border-radius: 25px;
       border-bottom: $secondary-color 5px solid;
       @include easeOut;
+
+      &:hover {
+        background: rgba(darken($abt-color, 20), 0.8);
+      }
 
       h4 {
         font-weight: 50;

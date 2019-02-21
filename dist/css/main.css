@@ -45,6 +45,24 @@
   min-width: fit-content;
   background: rgba(41, 36, 78, 0.55); }
 
+#abt-vdo {
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 2px;
+  z-index: -1; }
+  #abt-vdo video {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.15;
+    filter: contrast(150%) saturate(100%) hue-rotate(-170deg); }
+
 .overlay {
   z-index: -1;
   padding: 0;
@@ -200,6 +218,24 @@
   min-width: fit-content;
   background: rgba(41, 36, 78, 0.55); }
 
+#abt-vdo {
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 2px;
+  z-index: -1; }
+  #abt-vdo video {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.15;
+    filter: contrast(150%) saturate(100%) hue-rotate(-170deg); }
+
 .overlay {
   z-index: -1;
   padding: 0;
@@ -298,6 +334,7 @@ body {
     background-size: cover;
     margin: 2px; }
     body#about-img .overlay {
+      position: absolute;
       z-index: -1;
       padding: 0;
       margin: 0;
@@ -305,7 +342,14 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(186, 186, 186, 0.5), rgba(58, 58, 58, 0.5), rgba(58, 58, 58, 0.5), rgba(58, 58, 58, 0.5)); }
+      background: rgba(255, 0, 0, 0);
+      /*background: linear-gradient(
+        135deg,
+        rgba(lighten($primary-color, 50), 0.5),
+        rgba($primary-color, 0.5),
+        rgba($primary-color, 0.5),
+        rgba($primary-color, 0.5)
+      );*/ }
   body#work-img {
     background: url(../img/b1.jpg);
     background-attachment: fixed;
@@ -328,7 +372,7 @@ body {
   filter: blur(30px); }
 
 .darken {
-  background-color: #7a7a7a; }
+  background-color: #424242; }
 
 h1,
 h2,
@@ -340,8 +384,12 @@ h3 {
   h3.lg-heading {
     font-weight: 600;
     font-size: 5rem;
-    padding-bottom: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 1px;
+    padding-right: 30px;
     height: fit-content;
+    border-radius: 30px;
+    width: fit-content;
     position: relative;
     overflow: hidden;
     color: #000; }
@@ -396,9 +444,14 @@ main {
 #about {
   transition: all 0.7s ease-out;
   padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  z-index: 1; }
   #about .lg-heading {
+    background: linear-gradient(90deg, rgba(91, 49, 0, 0.6) 50%, rgba(91, 49, 0, 0) 80%);
     font-size: 4rem; }
+  #about .sm-heading {
+    background: rgba(91, 49, 0, 0.7);
+    border: 2px rgba(91, 49, 0, 0.8) solid; }
   #about .about-info {
     display: grid;
     grid-gap: 30px;
@@ -415,33 +468,38 @@ main {
       #about .about-info .bio p {
         margin-top: 2px; }
     #about .about-info .job-1 {
-      grid-area: job1; }
-      #about .about-info .job-1:hover {
-        background: #2d2d2d;
+      grid-area: job1;
+      /*&:hover {
+        background: darken($primary-color, 5);
         z-index: 2;
         transform: scale(1.5, 1.5);
-        transform-origin: left bottom; }
+        transform-origin: left bottom;
+      }*/ }
     #about .about-info .job-2 {
-      grid-area: job2; }
-      #about .about-info .job-2:hover {
-        background: #2d2d2d;
+      grid-area: job2;
+      /* &:hover {
+        background: darken($primary-color, 5);
         z-index: 2;
         transform: scale(1.5, 1.5);
-        transform-origin: bottom; }
+        transform-origin: bottom;
+      }*/ }
     #about .about-info .job-3 {
-      grid-area: job3; }
-      #about .about-info .job-3:hover {
-        background: #2d2d2d;
+      grid-area: job3;
+      /*&:hover {
+        //background: darken($primary-color, 5);
         z-index: 2;
         transform: scale(1.5, 1.5);
-        transform-origin: right bottom; }
+        transform-origin: right bottom;
+      }*/ }
     #about .about-info .job {
-      background: #474747;
-      z-index: 1;
+      background: rgba(91, 49, 0, 0.5);
+      z-index: 3;
       padding: 0.5rem;
       border-radius: 25px;
       border-bottom: #fc320a 5px solid;
       transition: all 0.7s ease-out; }
+      #about .about-info .job:hover {
+        background: rgba(0, 0, 0, 0.8); }
       #about .about-info .job h4 {
         font-weight: 50;
         margin: 10px 0; }
