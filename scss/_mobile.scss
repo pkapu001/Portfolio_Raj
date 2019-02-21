@@ -29,6 +29,9 @@
     width: 95%;
   }
 
+  .darken {
+    background-color: rgba(lighten($primary-color, $amount: 1), 0.7);
+  }
   #about {
     .about-info {
       grid-template-areas:
@@ -38,6 +41,12 @@
         "job2"
         "job3";
       grid-template-columns: 1fr;
+
+      .job {
+        &:hover {
+          background: rgba(darken($abt-color, 20), 0.7);
+        }
+      }
 
       /*.job-1 {
         &:hover {
