@@ -334,9 +334,8 @@ body {
     background: url(../img/b1.jpg);
     background-attachment: fixed;
     background-size: cover;
-    margin: 2px; }
+    margin: 0px; }
     body#work-img .overlay {
-      position: fixed;
       z-index: -1;
       padding: 0;
       margin: 0;
