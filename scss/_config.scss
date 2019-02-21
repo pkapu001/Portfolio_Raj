@@ -168,6 +168,7 @@ $background-opacity: 0.8;
   }
 }
 .overlay {
+  position: fixed;
   z-index: -1;
   padding: 0;
   margin: 0;
