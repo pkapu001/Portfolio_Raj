@@ -39,7 +39,7 @@
         "job3";
       grid-template-columns: 1fr;
 
-      .job-1 {
+      /*.job-1 {
         &:hover {
           transform: scale(1.05);
           transform-origin: bottom;
@@ -56,7 +56,7 @@
           transform: scale(1.05);
           transform-origin: bottom;
         }
-      }
+      }*/
     }
   }
 
@@ -132,15 +132,20 @@
 }
 
 @include mediaSm {
-  #about {
+  /*#about {
     .about-info {
+      .job {
+         &:hover {
+          transform: scale(1);
+        }
+      }
       .job-1 {
         &:hover {
           transform: scale(1);
         }
       }
       .job-2 {
-        &:hover {
+         &:hover {
           transform: scale(1);
         }
       }
@@ -150,7 +155,7 @@
         }
       }
     }
-  }
+  }*/
   .overlay {
     border-radius: 30px;
   }
